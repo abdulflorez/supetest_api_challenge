@@ -1,5 +1,5 @@
-const { request, expect } = require('../../utils/api_request');
-const { BOOKING_ENDPOINT } = require('../../config/api_config');
+const { expect } = require('../../utils/api_request');
+const { createBooking } = require('../../operations/api/booking');
 
 describe('Create Booking', function () {
   it('Create a new booking and return booking details', async function () {
@@ -15,12 +15,7 @@ describe('Create Booking', function () {
       additionalneeds: 'Breakfast',
     };
 
-    const res = await request
-      .post(BOOKING_ENDPOINT)
-      .set('Content-Type', 'application/json')
-      .set('Accept', 'application/json')
-      .send(newBooking);
-
+    const res = await createBooking(newBooking);
     expect(res.status).to.be.oneOf([200, 201]);
     expect(res.body).to.have.property('bookingid').that.is.a('number');
     expect(res.body).to.have.property('booking').that.is.an('object');
