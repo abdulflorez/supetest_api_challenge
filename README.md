@@ -1,8 +1,3 @@
-Absolutely! Here’s a **polished README template** modeled after your example, but adapted to your current **API automation project** structure and stack.
-It uses bullet points, code blocks, and short explanations for each section, making it clean and easy to read.
-
----
-
 # Test Automation Framework for Restful-Booker API
 
 This repository implements an API test automation framework built with:
