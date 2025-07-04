@@ -3,7 +3,8 @@ const {
   createBooking,
   deleteBooking,
   getBookingById,
-} = require('../../operations/booking');
+} = require('../../operations/api/booking');
+const { getToken } = require('../../operations/api/auth');
 
 describe('Delete Booking', function () {
   it('should delete the booking with a valid token and respond with correct status', async function () {

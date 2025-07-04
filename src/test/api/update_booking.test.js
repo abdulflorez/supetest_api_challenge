@@ -1,5 +1,9 @@
 const { expect } = require('../../utils/api_request');
-const { createBooking } = require('../../operations/booking');
+const {
+  createBooking,
+  updateBooking,
+} = require('../../operations/api/booking');
+const { getToken } = require('../../operations/api/auth');
 
 describe('Update Booking', function () {
   it('Update booking data with a valid token', async function () {

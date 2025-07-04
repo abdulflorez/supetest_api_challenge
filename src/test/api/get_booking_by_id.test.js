@@ -1,5 +1,8 @@
 const { expect } = require('../../utils/api_request');
-const { createBooking, getBookingById } = require('../../operations/booking');
+const {
+  createBooking,
+  getBookingById,
+} = require('../../operations/api/booking');
 
 describe('Get Booking by ID', function () {
   it('Get booking data for a valid booking ID', async function () {
